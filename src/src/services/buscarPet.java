@@ -15,12 +15,12 @@ import src.docs.model.PetAddress;
 import src.utils.ValidatorUtils;
 
 public class buscarPet {
+// leitura/processamento dos arquivos de pets e o sistema de buscas/filtros.
 
     static Path pathPetCadastrados = Paths.get("src/src/petCadastro");
-
     public ArrayList<pet> buscarPet() {
         File folder = new File(String.valueOf(pathPetCadastrados.toAbsolutePath()));
-        folder = new File(folder.getAbsolutePath()); // Força atualização
+        folder = new File(folder.getAbsolutePath());
         File[] files = folder.listFiles();
 
         ArrayList<pet> petList = null;

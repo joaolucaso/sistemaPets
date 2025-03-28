@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class FileRepository {
+//Esta classe é responsável por manipular arquivos relacionados ao cadastro de pets, incluindo a criação de formulários,
+// leitura de dados e salvamento de informações.
 
     static Path pathForm = Paths.get("src/src/docs/formulario.txt");
     static Path pathCadastrar = Paths.get("src/src/petCadastro");
@@ -73,6 +75,7 @@ public class FileRepository {
             } else {
                 System.out.println("Falha ao criar diretório.");
             }
+
         }
 
 

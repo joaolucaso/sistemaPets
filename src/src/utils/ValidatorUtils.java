@@ -4,7 +4,8 @@ import src.docs.model.pet;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+//ValidatorUtils, responsável por validar entradas do usuário em um sistema de cadastro de pets.
+// Cada método garante que os dados inseridos sejam válidos, tratando erros e repetindo a solicitação até que a entrada correta seja fornecida.
 public class ValidatorUtils {
     public String lerNomeValido(Scanner input) {
         try {
@@ -25,12 +26,12 @@ public class ValidatorUtils {
                 input.nextLine();
                 return numValido;
             } else {
-                System.out.println("Entrada inválida! Digite um número valido. CAI NESSA");
+                System.out.println("Entrada inválida! Digite um número valido.");
                 return lerUmOuDoisValido(input);
             }
 
         } catch (InputMismatchException e) {
-            System.out.println("Entrada inválida! Digite um número valido NAO CAI AQ.");
+            System.out.println("Entrada inválida! Digite um número valido.");
             input.nextLine();
             return lerUmOuDoisValido(input);
         }
@@ -91,7 +92,7 @@ public class ValidatorUtils {
 
         } catch (InputMismatchException | IllegalArgumentException e) {
             System.out.println("Erro: Entrada inválida! Digite um número.");
-            return lerIdadeValido(input);
+            return lerPesoValido(input);
         }
     }
 
